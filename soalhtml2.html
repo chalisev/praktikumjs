@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Buatlah login untuk menampilkan form login</h3>
+
+    <p id="message"></p>
+
+    <label for="username">Masukkan Nama :</label>
+    <input type="text" id="username" placeholder="Masukkan Nama">
+    <br>
+    <label for="password">Password :</label>
+    <input type="password" id="password" placeholder="Masukkan Password">
+    <br>
+
+    <button onclick="login()">login</button>
+
+        <script>
+            function login() {
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+                const messageElement = document.getElementById("message");
+
+                if (username ===  "stematel" && password === "2023") {
+                    messageElement.textContent = "Selamat Anda berhasil login"
+                }else {
+                    messageElement.textContent = "Maaf Anda gagal login"
+                }
+            }
+        </script>
+
+        <button><a href="index.html">kembali</a></button>
+
+</body>
+</html>

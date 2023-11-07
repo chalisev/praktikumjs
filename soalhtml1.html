@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Buatlah logika if dan else untuk mengevaluasi nilai score:</h3>
+
+    <label for="angka">Masukkan Angka: </label>
+    <input type="number" id="angka">
+    <br>
+    <button onclick="cek()">Cek</button>
+    <p id="hasil"></p>
+
+    <div class="ifelse">
+        <script>
+            function cek() {
+                const inputNilai = document.getElementById("angka").value;
+                const nilai = parseFloat(inputNilai);
+                const hasilElement = document.getElementById("hasil");
+
+                if (isNaN(nilai)) {
+                    hasilElement.textContent = "Masukkan angka terlebih dahulu.";
+                } else if (nilai >= 90) {
+                    hasilElement.textContent = "Selamat! Anda mendapatkan nilai A";
+                } else if (nilai >= 80) {
+                    hasilElement.textContent = "Anda mendapat nilai B";
+                } else if (nilai >= 70) {
+                    hasilElement.textContent = "Anda mendapatkan nilai C";
+                } else if (nilai >= 60) {
+                    hasilElement.textContent = "Anda mendapatkan nilai D";
+                } else {
+                    hasilElement.textContent = "Anda mendapat nilai E";
+                }
+            }
+        </script>
+    </div>
+
+    <button><a href="index.html">back</a></button>
+</body>
+</html>
